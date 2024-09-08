@@ -2,39 +2,6 @@
 
 This project analyzes transaction data to identify the top profitable owners from a CSV file. It uses a Flask backend with SQLAlchemy for database operations and a React frontend for displaying results.
 
-## Project Structure
-project/
-│
-├── backend/
-│ ├── app/
-│ │ ├── init.py
-│ │ ├── models/
-│ │ │ └── owner.py
-│ │ ├── repositories/
-│ │ │ └── owner_repository.py
-│ │ ├── services/
-│ │ │ └── profit_calculator.py
-│ │ ├── routes/
-│ │ │ └── owner_routes.py
-│ │ └── database.py
-│ ├── scripts/
-│ │ └── populate_db.py
-│ └── run.py
-│
-├── frontend/
-│ ├── public/
-│ │ └── index.html
-│ ├── src/
-│ │ ├── components/
-│ │ │ └── TopOwners.js
-│ │ ├── App.js
-│ │ └── index.js
-│ └── package.json
-│
-└── README.md
-python -m pytest tests/
-.
-This README provides a comprehensive overview of the project, including its structure, setup instructions, usage guidelines, and considerations for future improvements. You may want to adjust some details based on your specific project requirements or add more sections as needed.
 
 ## Setup and Installation
 
