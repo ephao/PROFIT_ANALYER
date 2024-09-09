@@ -1,12 +1,32 @@
-from flask import jsonify
-from app.services.profit_calculator import ProfitCalculator
+# This file contains the controller logic for owner-related operations
+
+from app.models.owner import Owner
 from app.repositories.owner_repository import OwnerRepository
 
 class OwnerController:
-    def __init__(self, csv_file):
-        self.owner_repository = OwnerRepository(csv_file)
-        self.profit_calculator = ProfitCalculator(self.owner_repository)
+    """
+    Handles business logic for owner-related operations.
+    """
 
-    def get_top_n_profitable_owners(self, n):
-        top_owners = self.profit_calculator.calculate_top_n_profitable_owners(n)
-        return jsonify([{'address': owner.address, 'total_profit': owner.total_profit} for owner in top_owners])
+    def __init__(self, repository: OwnerRepository):
+        """
+        Initializes the OwnerController with a repository.
+
+        Args:
+            repository (OwnerRepository): The repository for owner data access.
+        """
+        self.repository = repository
+
+    def create_owner(self, address: str) -> Owner:
+        """
+        Creates a new owner with the given address.
+
+        Args:
+            address (str): The Ethereum address of the owner.
+
+        Returns:
+            Owner: The newly created owner object.
+        """
+        # Implementation details...
+
+    # Other methods...
